@@ -9,7 +9,7 @@ metadata:
     backstage.io/source-location: url:https://github.com/appvia-demos/ssun-rds
     github.com/project-slug: appvia-demos/ssun-rds
     sonarqube.org/project-key: appvia-demos_ssun-rds
-    backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-ref: url:https://github.com/appvia-demos/ssun-rds/tree/main
     jfrog-artifactory/image-name: docker-trial/ssun-rds
     wayfinder/workspace: demo    
     wayfinder/app-name: ssun-rds
@@ -59,7 +59,7 @@ metadata:
     backstage.io/source-location: url:https://github.com/appvia-demos/ssun-rds
     github.com/project-slug: appvia-demos/ssun-rds
     sonarqube.org/project-key: appvia-demos_ssun-rds
-    backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-ref: url:https://github.com/appvia-demos/ssun-rds/tree/main
     wayfinder/workspace: demo
     wayfinder/app-name: ssun-rds
     wayfinder/app-component-name: ssun-rds-mysql
