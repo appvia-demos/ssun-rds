@@ -1,0 +1,76 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ssun-rds-app
+  # title: Wayfinder Application
+  description: Application created from the backstage software template
+  labels: {}
+  annotations:
+    backstage.io/source-location: url:https://github.com/appvia-demos/ssun-rds
+    github.com/project-slug: appvia-demos/ssun-rds
+    sonarqube.org/project-key: appvia-demos_ssun-rds
+    backstage.io/techdocs-ref: dir:.
+    jfrog-artifactory/image-name: docker-trial/ssun-rds
+    wayfinder/workspace: demo    
+    wayfinder/app-name: ssun-rds
+    wayfinder/app-component-name: ssun-rds-app
+  tags:
+    - wayfinder
+  links:
+    - url: https://github.com/appvia-demos/ssun-rds
+      title: GitHub Repository
+      type: Code
+      icon: github
+    - url: https://github.com/appvia-demos/ssun-rds/actions
+      title: GitHub Actions
+      type: CI/CD
+      icon: github
+    - url: https://github.com/appvia-demos/ssun-rds/releases
+      title: Releases
+      type: Release
+      icon: github
+    - url: https://sonarcloud.io/project/overview?id=appvia-demos_ssun-rds
+      title: SonarCloud Quality Gate
+      type: Quality
+      icon: sonarcloud
+    - url: https://portal.backstage.prod.wf.appvia.io/catalog/default/component/ssun-rds-app
+      title: Production Backstage
+      type: Backstage
+      icon: backstage
+    - url: https://trialm6kl97.jfrog.io/ui/repos/tree/General/docker-trial/ssun-rds
+      title: JFrog Artifactory
+      type: Docker Registry
+      icon: artifactory
+spec:
+  type: service
+  owner: user:default/ssun3
+  lifecycle: experimental
+  dependsOn:
+    - resource:default/ssun-rds-mysql
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ssun-rds-mysql
+  # title: Wayfinder Application DB
+  description: AWS RDS MySQL Database used by the Wayfinder Application
+  labels: {}
+  annotations:
+    backstage.io/source-location: url:https://github.com/appvia-demos/ssun-rds
+    github.com/project-slug: appvia-demos/ssun-rds
+    sonarqube.org/project-key: appvia-demos_ssun-rds
+    backstage.io/techdocs-ref: dir:.
+    wayfinder/workspace: demo
+    wayfinder/app-name: ssun-rds
+    wayfinder/app-component-name: ssun-rds-mysql
+  tags:
+    - wayfinder
+  links:
+    - url: https://github.com/appvia-demos/ssun-rds
+      title: GitHub Repository
+      type: Code
+      icon: github
+spec:
+  type: database
+  owner: user:default/ssun3
+  lifecycle: experimental

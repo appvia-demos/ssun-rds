@@ -1,0 +1,16 @@
+---
+# yamllint disable rule:line-length
+apiVersion: app.appvia.io/v2beta1
+kind: AppEnv
+metadata:
+  name: ssun-rds-prod
+spec:
+  application: ssun-rds
+  cloud: aws
+  clusterRef:
+    group: compute.appvia.io
+    kind: Cluster
+    name: prod
+    version: v2beta2
+  name: prod
+  stage: prod
